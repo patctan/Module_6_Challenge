@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>Weather Dashboard</header>
+    <!--Contains Search bar and search history-->
+    <section id="searchSection">
+      <div>
+        <h1>Search for a City</h1>
+        <form>
+          <input type="text" id="searchCity" />
+          <br />
+          <input type="submit" value="Search" id="searchBtn" />
+        </form>
+      </div>
+
+      <div id="historySection">
+        <div id="searchHistory"></div>
+        <div>Recent Searches</div>
+      </div>
+    </section>
+
+    <!--Contains the weather display and 5 day forecast-->
+    <section id="weatherDisplay">
+      <div>
+        <h2 class="cityName">This is a City Name</h2>
+        <h3 class="todaysDate">This is Today's Date</h3>
+        <table>
+          <tr>
+            <th class="temp">Temperature:</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th class="wind">Wind:</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th class="humidity">Humidity:</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th class="uvIndex">UV Index:</th>
+            <td></td>
+          </tr>
+        </table>
+        <!-- Use Javascript for cityName, todaysDate, and to make divs for Temp,
+        Wind, Humidity, and UV index-->
+      </div>
+
+      <!--Use Javascript to dynamically create divs for Temp, Wind, and Humidity-->
+      <!--Make cards for 5-Day forecast-->
+      <div id="fiveForecast">
+        <h4>5-Day Forecast:</h4>
+        <div class="container">
+          <div class="card">
+            <h5 id="forecast1">Forecast 1</h5>
+            <table>
+              <tr>
+                <th>Temperature:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Wind:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Humidity:</th>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
+            <h5 id="forecast2">Forecast 2</h5>
+            <table>
+              <tr>
+                <th>Temperature:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Wind:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Humidity:</th>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
+            <h5 id="forecast3">Forecast 3</h5>
+            <table>
+              <tr>
+                <th>Temperature:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Wind:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Humidity:</th>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
+            <h5 id="forecast4">Forecast 4</h5>
+            <table>
+              <tr>
+                <th>Temperature:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Wind:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Humidity:</th>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
+            <h5 id="forecast5">Forecast 5</h5>
+            <table>
+              <tr>
+                <th>Temperature:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Wind:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Humidity:</th>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIVEN a weather dashboard with form inputs
+WHEN I search for a city
+THEN I am presented with current and future conditions for that city and that city is added to the search history
+WHEN I view current weather conditions for that city
+THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+WHEN I view the UV index
+THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+WHEN I view future weather conditions for that city
+THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
+WHEN I click on a city in the search history
+THEN I am again presented with current and future conditions for that city-->
+    <script src="script.js"></script>
+  </body>
+</html>

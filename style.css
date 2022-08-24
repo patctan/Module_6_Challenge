@@ -1,0 +1,79 @@
+header {
+  align-content: center;
+  font-size: 50px;
+  text-align: center;
+  background-color: blue;
+  width: 100%;
+  color: white;
+}
+
+#searchSection {
+  border: solid 1px black;
+  width: 25%;
+  height: 650px;
+  float: left;
+  position: relative;
+}
+
+input {
+  width: 70%;
+}
+
+h1 {
+  font-size: large;
+}
+
+#searchBtn {
+  background-color: rgb(16, 163, 163);
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#historySection {
+  border-top: solid 1px black;
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  bottom: 0px;
+}
+
+#weatherDisplay {
+  width: 70%;
+  height: 650px;
+  position: relative;
+  right: 0px;
+  float: right;
+}
+
+#fiveForecast {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  border-top: solid 1px black;
+  bottom: 0px;
+  right: 0px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+.container {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+}
+.card {
+  display: inline;
+  color: white;
+  padding: 30px;
+  margin: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: navy;
+}
