@@ -32,7 +32,7 @@
 
 //use OneCall api 3.0 instead?
 let weather = {
-  apiKey: "e57070c21ce9424475afa701ad71a404",
+  apiKey: "",
   fetchWeather: function (city) {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -55,16 +55,20 @@ let weather = {
     document.querySelector(".humidity").innerText =
       "Humidity: " + humidity + "%";
   },
-  fetchUVIndex: function (city) {
+  fetch5Day: function (city) {
     fetch(
-      "https://api.openweathermap.org/data/3.0/onecall?lat=" +
+      "api.openweathermap.org/data/2.5/forecast?lat=" +
         lat +
-        "&" +
-        long +
-        "={lon}&appid=e57070c21ce9424475afa701ad71a404"
+        "&lon=" +
+        lon +
+        "&appid=e57070c21ce9424475afa701ad71a404"
     )
       .then((response) => response.json())
-      .then((data) => this.displayUVIndex(data));
+      .then((data) => this.display5Day(data));
   },
-  //displayUVIndex: function (data) {},
+  display5Day: function (data) {
+
+    const 
+
+  },
 };
