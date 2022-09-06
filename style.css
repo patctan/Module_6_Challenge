@@ -59,12 +59,12 @@ h4 {
   font-size: 24px;
 }
 
-.container {
+#container {
   display: flex;
 }
 
 @media (max-width: 800px) {
-  .container {
+  #container {
     flex-direction: column;
   }
 }

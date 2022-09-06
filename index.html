@@ -57,8 +57,8 @@
       <!--Make cards for 5-Day forecast-->
       <div id="fiveForecast">
         <h4>5-Day Forecast:</h4>
-        <div class="container">
-          <div class="card">
+        <div id="container">
+          <!-- <div class="card">
             <h5 id="forecast1">Forecast 1</h5>
             <table>
               <tr>
@@ -143,7 +143,7 @@
               </tr>
             </table>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -159,5 +159,9 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city-->
     <script src="script.js"></script>
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+  ></script>
   </body>
 </html>
