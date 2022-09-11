@@ -41,7 +41,7 @@
  var fiveDayArray = []; 
  console.log(fiveDayArray)
 
-const fiveDayForecast = function(city){// Make an object here
+const fiveDayForecast = function(city){
   console.log("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=e57070c21ce9424475afa701ad71a404"
   )
  fetch(
@@ -115,9 +115,29 @@ function generateCards(){
   
     fiveDayCards.innerHTML = fiveDayPullInfo;
 }
+
 document.querySelector("#searchForm").addEventListener("submit", function(event) {event.preventDefault()
   console.log(document.querySelector("#searchCity").value)
    weather.search()
-   generateCards();
+   generateCards();  
 })
 
+var loadCityButton = document.querySelector(".lastCity");
+
+function saveCitiesSearched() {
+  var citiesSearched = document.querySelector("#searchCity").value;
+  localStorage.setItem("citiesSearched", JSON.stringify(citiesSearched));}
+
+
+
+  function renderCitiesSearched() {
+    var lastCity = JSON.parse(localStorage.getItem("citiesSearched"));
+    if (lastCity !== null) {
+      `<button class = "lastCity"> ${lastCity}</button>`
+    } else return;
+  }
+  loadCityButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    weather.search(lastCity);
+    generateCards(lastCity);
+  })
