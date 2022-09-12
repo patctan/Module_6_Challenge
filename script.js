@@ -110,34 +110,46 @@ function generateCards(){
     <p>Humidity: ${data.main.humidity}</p>
     </div>
     </article></card>`;})
-    
     const fiveDayCards = document.querySelector("#container");
-  
-    fiveDayCards.innerHTML = fiveDayPullInfo;
-}
-
+    console.log('my five day cards are' + fiveDayCards.innerHTML)
+    // if (fiveDayCards.innerHTML = '') {
+    //   fiveDayCards.innerHTML = fiveDayPullInfo
+    // } else {fiveDayCards.innerHTML.removeChild();
+    fiveDayCards.innerHTML = fiveDayPullInfo;}
+    //fiveDayCards.innerHTML = fiveDayPullInfo;
+//}
+// function removeCards(){
+//   const generatedCard = document.getElementById('container');
+//   if(generatedCard.innerHTML = '') {
+//     return
+//   } else generatedCard.removeChild();
+// };
 document.querySelector("#searchForm").addEventListener("submit", function(event) {event.preventDefault()
   console.log(document.querySelector("#searchCity").value)
    weather.search()
+  //  removeCards();
    generateCards();  
 })
 
-var loadCityButton = document.querySelector(".lastCity");
+// var loadCityButton = document.querySelector(".lastCity");
 
-function saveCitiesSearched() {
-  var citiesSearched = document.querySelector("#searchCity").value;
-  localStorage.setItem("citiesSearched", JSON.stringify(citiesSearched));}
+// function saveCitiesSearched() {
+//   console.log("in function" + citiesSearched);
+//   var citiesSearched = document.querySelector("#searchCity").value;
+//   localStorage.setItem("citiesSearched", JSON.stringify(citiesSearched));
+// }
 
 
 
-  function renderCitiesSearched() {
-    var lastCity = JSON.parse(localStorage.getItem("citiesSearched"));
-    if (lastCity !== null) {
-      `<button class = "lastCity"> ${lastCity}</button>`
-    } else return;
-  }
-  loadCityButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    weather.search(lastCity);
-    generateCards(lastCity);
-  })
+//   function renderCitiesSearched() {
+//     var lastCity = JSON.parse(localStorage.getItem("citiesSearched"));
+//     if (lastCity !== null) {
+//       `<button class = "lastCity"> ${lastCity}</button>`
+//     } else return;
+//   }
+//   loadCityButton.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     weather.search(lastCity);
+//     generateCards(lastCity);
+//   }
+// )
