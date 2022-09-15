@@ -1,9 +1,8 @@
-// // 5 Day Forecast
 var searchHistoryArray = [];
 var fiveDayArray = [];
 console.log(fiveDayArray);
 
-//put function to push city into array within this function
+//Gets five day forecast of city
 const fiveDayForecast = function (city) {
   console.log(city);
   searchHistoryArray.push(city);
@@ -27,6 +26,7 @@ const fiveDayForecast = function (city) {
     });
 };
 
+//Gets current weather of city
 let weather = {
   apiKey: "e57070c21ce9424475afa701ad71a404",
   fetchWeather: function (city) {
@@ -56,6 +56,7 @@ let weather = {
   },
 };
 
+//Creates cards displaying the five day forecast
 function generateCards() {
   var fiveDayPullInfo = ``;
   fiveDayArray.forEach(function (data) {
@@ -80,6 +81,7 @@ function generateCards() {
   fiveDayCards.innerHTML = fiveDayPullInfo;
 }
 
+//Displays weather information when submit button is clicked
 document
   .querySelector("#searchForm")
   .addEventListener("submit", function (event) {
@@ -89,6 +91,8 @@ document
     weather.search();
     generateCards();
   });
+
+//Saves search info to local storage and displays them as buttons.
 document
   .querySelector("#searchForm")
   .addEventListener("submit", function (event) {
@@ -98,11 +102,13 @@ document
 
     let lastCityInfo = localStorage.getItem("citiesSearched");
     let savedInfo = JSON.parse(lastCityInfo);
-    //make a function to make an unordered list of buttons
+    //Make buttons link to EventListener to reproduce Search Results
     for (i = 0; i < savedInfo.length; i++) {
       const button = document.createElement("button");
       button.setAttribute("class", "searchHistoryButton");
       button.innerText = savedInfo[i];
       document.querySelector("#searchHistory").appendChild(button);
+      button.addEventListener("click", weather.search(savedInfo[i]));
+      button.addEventListener("click", generateCards(savedInfo[i]));
     }
   });
