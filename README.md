@@ -2,6 +2,8 @@
 
 This web application is designed to display the current weather, as well as the weather for the next five days, for the city that the user inputs.
 
+![First Screenshot](<assets/Screenshot (67).png>)
+
 ## Future Improvements
 
 With the current version of the application, several issues need to be fixed, which will be addressed below:
@@ -16,9 +18,11 @@ With the current version of the application, several issues need to be fixed, wh
 
 5. Info for the UV index for the current day is not displayed.
 
-## Links to repositories
+## GitHub
 
 https://github.com/patctan/Module_6_Challenge
+
+https://patctan.github.io/Module_6_Challenge/
 
 ## APIs
 
